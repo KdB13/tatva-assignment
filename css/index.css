@@ -1,0 +1,113 @@
+body {
+    background-color: #fafafa;
+    font-family: Roboto, sans-serif;
+}
+
+body > .container {
+    max-width: 1560px;
+}
+
+/*
+    1st Column
+    ----------
+    Hero image
+*/
+.hero {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    padding-right: 163px;
+}
+
+.hero .hero-image {
+    width: 576px;
+    height: 576px;
+    background: transparent url('/images/hero-image.png') 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 31px #0000000A;
+    border: 20px solid #FFFFFF;
+    border-radius: 50%;
+}
+
+
+/*
+    2nd Column
+    ----------
+    Login form
+*/
+.login {
+    padding-top: 106px;
+    padding-bottom: 105px;
+    padding-right: 155px;
+}
+
+.login .container {
+    padding: 0;
+    margin-left: 0;
+    max-width: 500px;
+}
+
+.login .tagline {
+    margin-top: 19px;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 47px;
+    color: #3E3E3E;
+}
+
+/* The form used for logging in */
+.login form {
+    width: 430px;
+}
+
+.login .login-header {
+    width: 500px;
+    margin-top: 32px;
+    margin-bottom: 23px;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 33px;
+    color: #3E3E3E;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    width: 429px;    
+    font-size: 15px;
+    line-height: 20px;
+    padding: 15px;
+    border: 1px solid #ADADAD;
+    border-radius: 5px;
+}
+
+.login input.password {
+    margin-top: 27px;
+    margin-bottom: 41px;
+}
+
+.login .register-text {
+    margin-top: 23px;
+}
+
+.login .btn-login {
+    background-color: #C8242F;
+    color: white;
+    border-width: 0px;
+    border-radius: 23px;
+    padding: 11px 47px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.login .register-text,
+.login .forgot-pw {
+    color: #ADADAD;
+    line-height: 20px;
+}
+
+.login .link {
+    text-decoration: none;
+}
+
+.login .link.register {
+    color: #C8242F;
+}
