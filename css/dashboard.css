@@ -1,0 +1,166 @@
+body {
+    background-color: #fafafa;
+    font-family: Roboto, sans-serif;
+}
+
+.btn-icon {
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-notifications {
+    background-image: url('/images/notification-icon.svg');
+    margin-right: 52px;
+}
+
+.btn-dropdown-arrow {
+    background-image: url('/images/downward-arrow.svg');
+}
+
+header {
+    padding-left: 29px;
+    padding-right: 44px;
+    background-color: white;
+}
+
+.navbar {
+    height: 80px;
+}
+
+.navbar .navbar-brand {
+    margin-left: 25px;
+}
+
+.search-bar {
+    padding-left: 77px;
+    padding-right: 50px;
+}
+
+.search-bar .search-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 15px;
+}
+
+.search-bar input {
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    line-height: 21px;
+    color: black;
+}
+
+.profile .username {
+    margin-right: 15px;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.profile .profile-image {
+    margin-right: 12px;
+}
+
+.sidebar {
+    padding: 25px 30px;
+    background-color: white;
+    height: 100vh;
+
+    /* Color overrides */
+    --bs-nav-link-color: #3E3E3E;
+}
+
+.sidebar .nav {
+    --bs-nav-link-hover-color: #3E3E3E;
+}
+
+.sidebar .nav-item {
+    display: flex;
+    align-items: center;
+    width: 183px;
+    padding-left: 18px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    --bs-nav-link-color: #3E3E3E;
+}
+
+.sidebar .nav-item:hover {
+    background-color: #FFF3F4
+}
+
+.sidebar .nav-item.active {
+    background-color: #FFF3F4;
+}
+
+.sidebar .nav-item.active .nav-link {
+    color: #C8242F
+}
+
+.sidebar .nav-item img {
+    width: 16px;
+    height: 16px;
+}
+
+.sidebar .nav-link {
+    padding-left: 13px;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.dashboard {
+    padding-left: 50px;
+    padding-right: 40px;
+    padding-top: 41px;
+}
+
+.dashboard [class*="col"] > div {
+    background-color: white;
+} 
+
+.dashboard > .title {
+    font-size: 30px;
+    line-height: 39px;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+.dashboard .stats-card {
+    display: flex;
+    align-items: center;
+    height: 116px;
+    padding-left: 38px;
+    padding-right: 28px;
+    border-radius: 5px;
+}
+
+.dashboard .stats .col {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.dashboard .stats-card p {
+    margin: 0;
+}
+
+.dashboard .stats-card img {
+    width: 33px;
+    height: 33px;
+    margin-right: 19px;
+}
+
+.dashboard .stats-card .count {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 33px;
+}
+
+.dashboard .stats-card .title {
+    font-size: 15px;
+    line-height: 20px;
+}
