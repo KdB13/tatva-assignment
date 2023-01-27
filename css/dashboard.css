@@ -35,10 +35,10 @@ header {
 
 .navbar .navbar-brand {
     margin-left: 25px;
+    margin-right: 77px;
 }
 
 .search-bar {
-    padding-left: 77px;
     padding-right: 50px;
 }
 
@@ -69,7 +69,6 @@ header {
 .sidebar {
     padding: 25px 30px;
     background-color: white;
-    height: 100vh;
 
     /* Color overrides */
     --bs-nav-link-color: #3E3E3E;
@@ -119,9 +118,18 @@ header {
     padding-top: 41px;
 }
 
+.dashboard h2 {
+    font-size: 22px;
+    line-height: 29px;
+}
+
 .dashboard [class*="col"] > div {
     background-color: white;
-} 
+}
+
+.dashboard .row div[class*="col"] > div {
+    border-radius: 5px;
+}
 
 .dashboard > .title {
     font-size: 30px;
@@ -136,7 +144,6 @@ header {
     height: 116px;
     padding-left: 38px;
     padding-right: 28px;
-    border-radius: 5px;
 }
 
 .dashboard .stats .col {
@@ -163,4 +170,146 @@ header {
 .dashboard .stats-card .title {
     font-size: 15px;
     line-height: 20px;
+}
+
+section.sales {
+    padding-top: 30px;
+}
+
+section.sales .sale,
+section.sales .sales-by-country,
+section.invoices .table {
+    padding: 24px 29px 29px 29px;
+}
+
+section.sales .sale-header .nav-link {
+    padding: 9px 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ADADAD;
+}
+
+section.sales > div:nth-child(1) {
+    flex-basis: 802px;
+}
+
+section.sales > div:nth-child(2) {
+    flex: 1;
+}
+
+section.sales .sale,
+.sales-by-country {
+    height: 100%;
+}
+
+section.sales .sale-header {
+    margin-bottom: 23px;
+}
+
+section.sales .sale-header .nav-link.active {
+    background-color: transparent;
+    color: #C8242F;
+    border-bottom: 1px solid #C8242F;
+    border-radius: 0;
+}
+
+section.sales .sales-by-country h2 {
+    margin-bottom: 27px;
+}
+
+section.sales .sales-by-country .legend {
+    padding: 0;
+    margin: 0;
+}
+
+section.sales .sales-by-country .legend {
+    list-style-type: none;
+    flex-wrap: wrap;
+    row-gap: 18px;
+}
+
+section.sales .sales-by-country .legend li {
+    flex: 50%;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+section.sales .sales-by-country .legend li::before {
+    display: inline-block;
+    content: '';
+    height: 18px;
+    width: 18px;
+    margin-right: 9px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+section.sales .sales-by-country .legend li.usa::before {
+    background: #C8242F;
+}
+
+section.sales .sales-by-country .legend li.canada::before {
+    background: #A2B86C;
+}
+
+section.sales .sales-by-country .legend li.russia::before {
+    background: #F16C20;
+}
+
+section.sales .sales-by-country .legend li.india::before {
+    background: #EBC844;
+}
+
+section.invoices {
+    padding-top: 30px;
+}
+
+section.invoices .view-all {
+    font-size: 12px;
+    line-height: 16px;
+    color: #C8242F;
+}
+
+section.invoices table {
+    margin-top: 37px;
+}
+
+section.invoices th {
+    padding-bottom: 14px;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: normal;
+    color: #ADADAD;
+}
+
+section.invoices td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #3E3E3E;
+}
+
+section.invoices .status {
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+section.invoices .status.paid {
+    background-color: #EBFFEF;
+    color: #3CDD5F;
+}
+
+section.invoices .status.failed {
+    background-color: #FFF5F5;
+    color: #FF4545;
+}
+
+section.invoices .status.pending {
+    background-color: #F8F8F8;
+    color: #BABABA;
 }
