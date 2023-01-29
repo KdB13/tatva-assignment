@@ -1,1 +1,321 @@
 @import 'base.css';
+
+.innerpage .form {
+    background-color: white;
+    border-radius: 5px;
+    padding: 23px 30px 36px 36px;
+}
+
+.innerpage .form section {
+    margin-bottom: 44px;
+}
+
+.innerpage .form .controls {
+    display: flex;
+    flex-direction: column;
+    row-gap: 21px;
+}
+
+.innerpage h2 {
+    font-size: 22px;
+    line-height: 29px;
+    margin-bottom: 15px;
+    color: #3E3E3E;
+}
+
+.innerpage h3 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    color: #3E3E3E;
+}
+
+.innerpage .form section .row {
+    column-gap: calc(30px - 12px * 2);
+}
+
+
+/* Form controls */
+.innerpage .form select,
+.innerpage .form select option,
+.innerpage .form-control {
+    color: #3E3E3E;
+}
+
+.innerpage .form select option[value=""] {
+    color: #ADADAD;
+}
+
+.innerpage .form select:invalid {
+    color: #ADADAD;
+}
+
+.innerpage .form-control[type="text"],
+.innerpage .form-control[type="password"],
+.innerpage .form-select,
+.innerpage .form textarea {
+    padding: 15px;
+    border: 1px solid #ADADAD;
+    border-radius: 5px;
+}
+
+.innerpage .form-control:focus,
+.innerpage .form-select:focus {
+    border-color: #C8242F;
+    box-shadow: none;
+}
+
+.innerpage .form input:disabled {
+    background-color: transparent;
+    color: #ADADAD;
+    opacity: 0.5;
+    border-style: dashed;
+}
+
+.innerpage .form textarea {
+    min-height: 130px;
+}
+
+/* File picker */
+.file-picker {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.file-status {
+    font-size: 12px;
+    line-height: 16px;
+    color: #ADADAD;
+}
+
+.file-btn {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #C8242F;
+    padding: 8px 25px;
+    cursor: pointer;
+    border: 1px solid #C8242F;
+    border-radius: 20px;
+}
+
+
+/* Error states */
+.innerpage .form-control.invalid,
+.innerpage .form-select.invalid {
+    border-color: #FF3B3B;
+}
+
+.innerpage .form .error-message,
+.innerpage .form .info-message {
+    padding-top: 10px;
+    padding-left: 16px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.innerpage .form .error-message {
+    color: #FF3B3B;
+}
+
+.innerpage .form .info-message {
+    color: #ADADAD;
+}
+
+
+/* Checkboxes and radio buttons */
+.form-check-label {
+    font-size: 15px;
+    line-height: 20px;
+    color: #3E3E3E;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+/* Radio buttons */
+.form-check-input[type="radio"] {
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    /* Adjusts the position of the checkboxes on the text baseline */
+    vertical-align: -2px;
+    outline: none;
+}
+
+.form-check-input[type="radio"]::before {
+    display: block;
+    content: " ";
+    width: 7px;
+    height: 7px;
+    border-radius: 6px;
+    background-color: #C8242F;
+    font-size: 1.2em;
+    transform: translate(2px, 2px) scale(0);
+    transform-origin: center;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+.form-check-input[type="radio"]:checked {
+    background-color: transparent;
+    border-color: #C8242F;
+}
+
+.form-check-input[type="radio"]:checked::before {
+    transform: translate(2px, 2px) scale(1);
+}
+
+
+/* Checkbox */
+.form-check-input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ADADAD;
+    border-radius: 3px;
+    vertical-align: -2px;
+    outline: none;
+}
+
+.form-check-input[type="checkbox"]::before {
+    display: block;
+    content: " ";
+    width: 8px;
+    height: 4px;
+    border: 1px solid #ADADAD;
+    border-top: none;
+    border-right: none;
+    transform: translate(2px, 3px) rotate(-45deg);
+}
+
+.form-check-input[type="checkbox"]:checked {
+    background-color: #C8242F;
+    background-image: none;
+    border-color: #C8242F;
+}
+
+.form-check-input[type="checkbox"]:checked::before {
+    border-color: white;
+}
+
+
+/* Snackbar */
+section.snackbars .col.controls {
+    row-gap: 25px;
+}
+
+.snackbar {
+    display: flex;
+    align-items: center;
+    padding: 14px 11px;
+    border: 1px solid;
+    border-radius: 5px;
+    column-gap: 10px;
+}
+
+.snackbar img {
+    width: 17px;
+    height: 17px;
+}
+
+.snackbar p.message {
+    margin: 0;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+/* Snackbar styles */
+.snackbar.error {
+    border-color: #FF3535;
+}
+
+.snackbar.error p.message {
+    color: #FF3535;
+}
+
+.snackbar.info {
+    border-color: #00B9E1;
+}
+
+.snackbar.info p.message {
+    color: #00B9E1;
+}
+
+.snackbar.warning {
+    border-color: #FFA800;
+}
+
+.snackbar.warning p.message {
+    color: #FFA800;
+}
+
+.snackbar.success {
+    border-color: #00AF27;
+}
+
+.snackbar.success p.message {
+    color: #00AF27;
+}
+
+
+/* Call to Action buttons */
+.ctas {
+    display: flex;
+    column-gap: 21px;
+}
+
+.cta {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    border: 1px solid;
+    border-radius: 22px;
+    padding: 10px 30px;
+}
+
+.cta.primary {
+    background-color: #C8242F;
+    color: white;
+}
+
+.cta.secondary {
+    background-color: white;
+    color: #C8242F;
+}
+
+
+/* Tabs */
+.innerpage .form section.tabs {
+    margin: 0;
+}
+
+.tab-bar {
+    border-bottom: 1px solid #ADADAD;
+}
+
+.tab-bar .nav-link {
+    font-size: 15px;
+    line-height: 20px;
+    border-radius: 0;
+    color: #ADADAD;
+    margin-bottom: calc(0px - 2px);
+}
+
+.tab-bar .nav-link.active {
+    font-weight: 500;
+    background-color: transparent;
+    color: #C8242F;
+    border-bottom: 3px solid #C8242F;
+}
+
+section.tabs .content {
+    margin-top: 27px;
+    margin-bottom: 0;
+}

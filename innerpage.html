@@ -91,9 +91,230 @@
         <!-- The main content -->
         <main class="innerpage flex-fill">
           <h1 class="title">Analysis</h1>
-        </main>
 
+          <div class="fluid-container form">
+            <form action="#" method="post">
+
+              <section>
+                <h2>One Column</h2>
+
+                <div class="controls">
+                  <input type="text" class="form-control" placeholder="Name" name="name">
+
+                  <select name="dropdown-1" id="dropdown" class="form-select" required>
+                    <option selected value="">Dropdown</option>
+                    <option value="sample-1">Sample option 1</option>
+                    <option value="sample-2">Sample option 2</option>
+                    <option value="sample-3">Sample option 3</option>
+                  </select>
+
+                  <textarea class="form-control" name="multiline" id="multiline" placeholder="Multiple line"></textarea>
+                </div>
+              </section>
+
+              <section>
+                <h2>Two Column</h2>
+
+                <div class="row">
+                  <div class="col controls">
+                    <input type="text" class="form-control" placeholder="Name" name="name">
+                    <input type="password" class="form-control" placeholder="Password" name="password">
+                  </div>
+
+                  <div class="col controls">
+                    <input type="text" class="form-control" placeholder="Username" name="username" value="johndoe">
+
+                    <select name="dropdown-2" id="dropdown" class="form-select novalidate" required>
+                      <option selected value="">Dropdown</option>
+                      <option value="sample-1">Sample option 1</option>
+                      <option value="sample-2">Sample option 2</option>
+                      <option value="sample-3">Sample option 3</option>
+                    </select>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h2>Three Column</h2>
+
+                <div class="row">
+                  <div class="col controls">
+                    <input type="text" class="form-control" placeholder="Focus" name="name">
+                  </div>
+
+                  <div class="col controls">
+                    <input type="password" class="form-control" placeholder="Password" name="password">
+                  </div>
+
+                  <div class="col controls">
+                    <input type="text" value="johndoe" class="form-control" placeholder="Disabled" name="disabled"
+                      disabled>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h2>Four Column</h2>
+
+                <div class="row">
+                  <div class="col">
+                    <input type="text" class="form-control invalid" placeholder="Designation" name="designation"
+                      value="UI Designer" required invalid>
+                    <div class="error-message">
+                      Enter valid data.
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Name" name="name">
+                    <div class="info-message">
+                      Enter your full Name as per ID
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <input type="text" value="johndoe" class="form-control" placeholder="Username" name="username">
+                  </div>
+
+                  <div class="col">
+                    <select name="dropdown-3" id="dropdown" class="form-select novalidate" required>
+                      <option selected value="">Select</option>
+                      <option value="sample-1">Sample option 1</option>
+                      <option value="sample-2">Sample option 2</option>
+                      <option value="sample-3">Sample option 3</option>
+                    </select>
+                  </div>
+                </div>
+              </section>
+
+              <section class="my-0">
+                <h2>Other Design Elements</h2>
+
+                <section>
+                  <h3>File Upload</h3>
+
+                  <div class="file-picker">
+                    <label for="fileToUpload" class="file-btn">
+                      <img src="./images/cloud-upload-icon.svg" alt="" />
+                      <span>Upload</span>
+                    </label>
+
+                    <input id="fileToUpload" type="file" name="fileToUpload" hidden>
+
+                    <label for="fileToUpload" class="file-status">No item selected</label>
+                  </div>
+                </section>
+
+                <section>
+                  <h3>Radio Button</h3>
+
+                  <div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="radio-btn" id="radio-btn1">
+                      <label class="form-check-label" for="radio-btn1">
+                        Option 1
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="radio-btn" id="radio-btn2" checked>
+                      <label class="form-check-label" for="radio-btn2">
+                        Option 2
+                      </label>
+                    </div>
+                  </div>
+                </section>
+
+                <section>
+                  <h3>Checkbox</h3>
+
+                  <div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="checkbox" id="chk-1">
+                      <label class="form-check-label" for="chk-1">
+                        Option 1
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="checkbox" id="chk-2" checked>
+                      <label class="form-check-label" for="chk-2">
+                        Option 2
+                      </label>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="snackbars">
+                  <h3>Snackbar</h3>
+
+                  <div class="row">
+                    <div class="col controls">
+                      <div class="snackbar error">
+                        <img src="./images/error-icon.svg" alt="">
+                        <p class="message">This is an error message!</p>
+                      </div>
+
+                      <div class="snackbar warning">
+                        <img src="./images/warning-icon.svg" alt="">
+                        <p class="message">This is a warning message!</p>
+                      </div>
+                    </div>
+
+                    <div class="col controls">
+                      <div class="snackbar info">
+                        <img src="./images/info-icon.svg" alt="">
+                        <p class="message">This is an information message!</p>
+                      </div>
+
+                      <div class="snackbar success">
+                        <img src="./images/success-icon.svg" alt="">
+                        <p class="message">This is a success message!</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section>
+                  <h3>Call to Action</h3>
+
+                  <div class="ctas">
+                    <button class="cta primary">Primary</button>
+                    <button class="cta secondary">Secondary</button>
+                  </div>
+                </section>
+
+                <section class="tabs">
+                  <h3>Tabs</h3>
+
+                  <nav class="tab-bar">
+                    <ul class="nav nav-pills">
+                      <li class="nav-item">
+                        <button class="nav-link active">Tab 1</button>
+                      </li>
+                      <li class="nav-item">
+                        <button class="nav-link">Tab 2</button>
+                      </li>
+                      <li class="nav-item">
+                        <button class="nav-link">Tab 3</button>
+                      </li>
+                    </ul>
+                  </nav>
+
+                  <p class="content">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing
+                  </p>
+                </section>
+              </section>
+            </form>
+
+          </div>
+
+        </main>
       </div>
     </div>
   </body>
+
 </html>
