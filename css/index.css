@@ -3,8 +3,9 @@ body {
     font-family: Roboto, sans-serif;
 }
 
-body > .container {
-    max-width: 1560px;
+body > div[class*="container"] {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 /*
@@ -13,15 +14,10 @@ body > .container {
     Hero image
 */
 .hero {
-    padding-top: 72px;
-    padding-bottom: 72px;
-    padding-right: 163px;
+    padding-top: 2rem;
 }
 
 .hero .hero-image {
-    width: 576px;
-    height: 576px;
-    background: transparent url('/images/hero-image.png') 0% 0% no-repeat padding-box;
     box-shadow: 0px 4px 31px #0000000A;
     border: 20px solid #FFFFFF;
     border-radius: 50%;
@@ -34,32 +30,22 @@ body > .container {
     Login form
 */
 .login {
-    padding-top: 106px;
-    padding-bottom: 105px;
-    padding-right: 155px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
-.login .container {
+.login .container-fluid {
     padding: 0;
     margin-left: 0;
-    max-width: 500px;
 }
 
 .login .tagline {
     margin-top: 19px;
     font-weight: 300;
-    font-size: 40px;
-    line-height: 47px;
     color: #3E3E3E;
 }
 
-/* The form used for logging in */
-.login form {
-    width: 430px;
-}
-
 .login .login-header {
-    width: 500px;
     margin-top: 32px;
     margin-bottom: 23px;
     font-size: 25px;
@@ -70,7 +56,6 @@ body > .container {
 
 .login input[type="text"],
 .login input[type="password"] {
-    width: 429px;    
     font-size: 15px;
     line-height: 20px;
     padding: 15px;
@@ -87,6 +72,14 @@ body > .container {
     margin-top: 23px;
 }
 
+.login .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    row-gap: 1rem;
+}
+
 .login .btn-login {
     background-color: #C8242F;
     color: white;
@@ -98,10 +91,18 @@ body > .container {
     line-height: 24px;
 }
 
+.login .register-text {
+    text-align: center;
+}
+
 .login .register-text,
 .login .forgot-pw {
     color: #ADADAD;
     line-height: 20px;
+}
+
+.login .forgot-pw {
+    text-align: center;
 }
 
 .login .link {
@@ -110,4 +111,103 @@ body > .container {
 
 .login .link.register {
     color: #C8242F;
+}
+
+
+/*
+    Responsive Design
+    -----------------
+*/
+
+/* Small devices (landscape phones) */
+@media (min-width: 576px) {
+    body > div[class*="container"] {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .hero .hero-image {
+        max-width: 400px;
+    }
+
+    .hero > div {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .login .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .login .register-text {
+        text-align: left;
+    }
+}
+
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) {
+    main > .row {
+        --bs-gutter-x: 35px;
+    }
+
+    .hero > div {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero {
+        padding-top: 72px;
+    }
+
+    .hero .hero-image {
+        max-width: 100%;
+    }
+
+    .login {
+        padding-top: 106px;
+    }
+}
+
+/* Large devices */
+@media (min-width: 992px) {
+    main > .row {
+        --bs-gutter-x: 60px;
+    }
+
+    .login .tagline {
+        max-width: 500px;
+        font-size: 40px;
+        line-height: 47px;
+    }
+
+    .login form {
+        width: 430px;
+    }
+
+}
+
+/* X-large devices */
+@media (min-width: 1200px) {
+    main > .row {
+        --bs-gutter-x: 100px;
+    }
+}
+
+/* XX-large devices */
+@media (min-width: 1400px) {
+    main > .row {
+        --bs-gutter-x: 166px;
+    }
+
+    .login input[type="text"],
+    .login input[type="password"] {
+        width: 429px;
+    }
+
+    .login .container-fluid {
+        max-width: 500px;
+    }
 }
