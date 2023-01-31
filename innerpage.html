@@ -97,7 +97,10 @@
                 <h2>One Column</h2>
 
                 <div class="controls">
-                  <input type="text" class="form-control" placeholder="Name" name="name">
+                  <div class="input-container">
+                    <input type="text" class="form-control" id="name" name="name">
+                    <label for="name">Name</label>
+                  </div>
 
                   <select name="dropdown-1" id="dropdown" class="form-select" required>
                     <option selected value="">Dropdown</option>
@@ -115,12 +118,22 @@
 
                 <div class="row">
                   <div class="col-12 col-md-6 controls">
-                    <input type="text" class="form-control" placeholder="Name" name="name">
-                    <input type="password" class="form-control" placeholder="Password" name="password">
+                    <div class="input-container">
+                      <input type="text" class="form-control" id="name" name="name">
+                      <label for="name">Name</label>
+                    </div>
+
+                    <div class="input-container">
+                      <input type="password" class="form-control" id="password" name="password">
+                      <label for="password">Password</label>
+                    </div>
                   </div>
 
                   <div class="col-12 col-md-6 controls">
-                    <input type="text" class="form-control" placeholder="Username" name="username" value="johndoe">
+                    <div class="input-container">
+                      <input type="text" class="form-control" id="username" name="username" value="johndoe">
+                      <label for="username">Username</label>
+                    </div>
 
                     <select name="dropdown-2" id="dropdown" class="form-select novalidate" required>
                       <option selected value="">Dropdown</option>
@@ -137,16 +150,25 @@
 
                 <div class="row">
                   <div class="col-12 col-md-4 controls">
-                    <input type="text" class="form-control" placeholder="Focus" name="name">
+                    <div class="input-container">
+                      <input type="text" class="form-control" id="focus" name="focus">
+                      <label for="focus">Focus</label>
+                    </div>
                   </div>
 
                   <div class="col-12 col-md-4 controls">
-                    <input type="password" class="form-control" placeholder="Password" name="password">
+                    <div class="input-container">
+                      <input type="password" class="form-control" id="password" name="password">
+                      <label for="password">Password</label>
+                    </div>
                   </div>
 
                   <div class="col-12 col-md-4 controls">
-                    <input type="text" value="johndoe" class="form-control" placeholder="Disabled" name="disabled"
-                      disabled>
+                    <div class="input-container">
+                      <input type="text" value="johndoe" class="form-control" id="disabled" name="disabled"
+                        disabled>
+                      <label for="disabled">Disabled</label>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -156,22 +178,33 @@
 
                 <div class="row">
                   <div class="col-12 col-md-3">
-                    <input type="text" class="form-control invalid" placeholder="Designation" name="designation"
-                      value="UI Designer" required invalid>
+                    <div class="input-container">
+                      <input type="text" class="form-control invalid" id="designation" name="designation"
+                        value="UI Designer" required invalid>
+                      <label for="designation">Designation</label>
+                    </div>
+
                     <div class="error-message">
                       Enter valid data.
                     </div>
                   </div>
 
                   <div class="col-12 col-md-3">
-                    <input type="text" class="form-control" placeholder="Name" name="name">
+                    <div class="input-container">
+                      <input type="text" class="form-control" id="name" name="name">
+                      <label for="name">Name</label>
+                    </div>
+
                     <div class="info-message">
                       Enter your full Name as per ID
                     </div>
                   </div>
 
                   <div class="col-12 col-md-3">
-                    <input type="text" value="johndoe" class="form-control" placeholder="Username" name="username">
+                    <div class="input-container">
+                      <input type="text" value="johndoe" class="form-control" id="username" name="username">
+                      <label for="username">Username</label>
+                    </div>
                   </div>
 
                   <div class="col-12 col-md-3">
@@ -319,6 +352,9 @@
 
     <!-- Sidebar JS -->
     <script src="./js/sidebar.js"></script>
+
+    <!-- Floating Label input -->
+    <script src="./js/floating-input.js"></script>
   </body>
 
 </html>

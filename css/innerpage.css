@@ -40,6 +40,31 @@ section.snackbars .row {
 
 
 /* Form controls */
+.input-container {
+    position: relative;
+}
+
+.input-container label {
+    display: block;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform-origin: left top;
+    transform: translateY(-50%);
+    font-size: 15px;
+    line-height: 20px;
+    color: #ADADAD;
+}
+
+.input-container input:focus + label,
+.input-container input.is-focused + label {
+    background-color: white;
+    padding: 0 4px;
+    transform: translateY(-220%);
+    font-size: 12px;
+    line-height: 16px;
+}
+
 .innerpage .form select,
 .innerpage .form select option,
 .innerpage .form-control {

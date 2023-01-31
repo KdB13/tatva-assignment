@@ -16,7 +16,6 @@ body {
 
 .btn-notifications {
     background-image: url('/images/notification-icon.svg');
-    margin-right: 52px;
 }
 
 .btn-dropdown-arrow {
@@ -195,6 +194,8 @@ main .title {
     header {
         padding-left: 29px;
         padding-right: 44px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     header .navbar {
@@ -219,6 +220,10 @@ main .title {
 
     header .navbar .prof-notif {
         order: 3;
+    }
+
+    header .navbar .btn-notifications {
+        margin-right: 52px;
     }
 
     .sidebar {
