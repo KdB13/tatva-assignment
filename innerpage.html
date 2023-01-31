@@ -20,73 +20,71 @@
     <div class="container-fluid px-0">
 
       <!-- Header -->
-      <header>
-        <nav class="navbar">
-          <div class="d-flex">
-            <img src="./images/menu-bar.svg" alt="">
-            <img src="./images/header-logo.svg" alt="Company logo" class="navbar-brand">
-          </div>
+      <div class="row g-0">
+        <div class="col">
+          <header>
+            <nav class="navbar">
+              <div class="logo d-flex">
+                <img id="sidebarToggle" class="btn-menu" src="./images/menu-bar.svg" alt="">
+                <img src="./images/header-logo.svg" alt="Company logo" class="navbar-brand">
+              </div>
 
-          <div class="search-bar d-flex align-items-center flex-fill">
-            <img src="./images/search-icon.svg" alt="" class="search-icon">
-            <form action="#" class="flex-fill">
-              <input type="search" placeholder="Search" name="q" class="w-100">
-            </form>
-          </div>
+              <div class="search-bar d-flex align-items-center">
+                <img src="./images/search-icon.svg" alt="" class="search-icon">
+                <form action="#" class="flex-fill">
+                  <input type="search" placeholder="Search" name="q" class="w-100">
+                </form>
+              </div>
 
-          <div class="d-flex align-items-center">
-            <button class="btn-icon btn-notifications"></button>
-            <div class="profile d-flex align-items-center">
-              <img src="./images/profile.png" alt="Profile picture" class="profile-image">
-              <div class="username">John Doe</div>
-              <button class="btn-icon btn-dropdown-arrow"></button>
-            </div>
-          </div>
-        </nav>
-      </header>
+              <div class="prof-notif d-flex align-items-center">
+                <button class="btn-icon btn-notifications"></button>
+                <div class="profile d-flex align-items-center">
+                  <img src="./images/profile.png" alt="Profile picture" class="profile-image">
+                  <div class="username">John Doe</div>
+                  <button class="btn-icon btn-dropdown-arrow"></button>
+                </div>
+              </div>
+            </nav>
+          </header>
+        </div>
+      </div>
 
-      <div class="d-flex align-items-stretch">
+      <div class="main-container d-flex">
         <!-- Navigation sidebar -->
-        <nav class="sidebar">
-          <ul class="nav flex-column">
-
-            <li class="nav-item">
-              <img src="./images/dashboard-default.svg" alt="">
-              <a href="dashboard.html" class="nav-link" aria-current="page">Dashboard</a>
-            </li>
-
-            <li class="nav-item active">
-              <img src="./images/graph-active.svg" alt="">
-              <a href="innerpage.html" class="nav-link">Analysis</a>
-            </li>
-
-            <li class="nav-item">
-              <img src="./images/inbox-default.svg" alt="">
-              <a href="#" class="nav-link">Inbox</a>
-            </li>
-
-            <li class="nav-item">
-              <img src="./images/clock-default.svg" alt="">
-              <a href="#" class="nav-link">History</a>
-            </li>
-
-            <li class="nav-item">
-              <img src="./images/user-default.svg" alt="">
-              <a href="#" class="nav-link">Users</a>
-            </li>
-
-            <li class="nav-item">
-              <img src="./images/maintenance-default.svg" alt="">
-              <a href="#" class="nav-link">Maintenance</a>
-            </li>
-
-            <li class="nav-item">
-              <img src="./images/setting-default.svg" alt="">
-              <a href="#" class="nav-link">Setting</a>
-            </li>
-
-          </ul>
-        </nav>
+        <div class="sidebar-wrapper">
+          <nav class="sidebar h-100">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <img src="./images/dashboard-default.svg" alt="">
+                <a href="dashboard.html" class="nav-link" aria-current="page">Dashboard</a>
+              </li>
+              <li class="nav-item active">
+                <img src="./images/graph-active.svg" alt="">
+                <a href="innerpage.html" class="nav-link">Analysis</a>
+              </li>
+              <li class="nav-item">
+                <img src="./images/inbox-default.svg" alt="">
+                <a href="#" class="nav-link">Inbox</a>
+              </li>
+              <li class="nav-item">
+                <img src="./images/clock-default.svg" alt="">
+                <a href="#" class="nav-link">History</a>
+              </li>
+              <li class="nav-item">
+                <img src="./images/user-default.svg" alt="">
+                <a href="#" class="nav-link">Users</a>
+              </li>
+              <li class="nav-item">
+                <img src="./images/maintenance-default.svg" alt="">
+                <a href="#" class="nav-link">Maintenance</a>
+              </li>
+              <li class="nav-item">
+                <img src="./images/setting-default.svg" alt="">
+                <a href="#" class="nav-link">Setting</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
         <!-- The main content -->
         <main class="innerpage flex-fill">
@@ -112,16 +110,16 @@
                 </div>
               </section>
 
-              <section>
+              <section class="two-col">
                 <h2>Two Column</h2>
 
                 <div class="row">
-                  <div class="col controls">
+                  <div class="col-12 col-md-6 controls">
                     <input type="text" class="form-control" placeholder="Name" name="name">
                     <input type="password" class="form-control" placeholder="Password" name="password">
                   </div>
 
-                  <div class="col controls">
+                  <div class="col-12 col-md-6 controls">
                     <input type="text" class="form-control" placeholder="Username" name="username" value="johndoe">
 
                     <select name="dropdown-2" id="dropdown" class="form-select novalidate" required>
@@ -134,30 +132,30 @@
                 </div>
               </section>
 
-              <section>
+              <section class="three-col">
                 <h2>Three Column</h2>
 
                 <div class="row">
-                  <div class="col controls">
+                  <div class="col-12 col-md-4 controls">
                     <input type="text" class="form-control" placeholder="Focus" name="name">
                   </div>
 
-                  <div class="col controls">
+                  <div class="col-12 col-md-4 controls">
                     <input type="password" class="form-control" placeholder="Password" name="password">
                   </div>
 
-                  <div class="col controls">
+                  <div class="col-12 col-md-4 controls">
                     <input type="text" value="johndoe" class="form-control" placeholder="Disabled" name="disabled"
                       disabled>
                   </div>
                 </div>
               </section>
 
-              <section>
+              <section class="four-col">
                 <h2>Four Column</h2>
 
                 <div class="row">
-                  <div class="col">
+                  <div class="col-12 col-md-3">
                     <input type="text" class="form-control invalid" placeholder="Designation" name="designation"
                       value="UI Designer" required invalid>
                     <div class="error-message">
@@ -165,18 +163,18 @@
                     </div>
                   </div>
 
-                  <div class="col">
+                  <div class="col-12 col-md-3">
                     <input type="text" class="form-control" placeholder="Name" name="name">
                     <div class="info-message">
                       Enter your full Name as per ID
                     </div>
                   </div>
 
-                  <div class="col">
+                  <div class="col-12 col-md-3">
                     <input type="text" value="johndoe" class="form-control" placeholder="Username" name="username">
                   </div>
 
-                  <div class="col">
+                  <div class="col-12 col-md-3">
                     <select name="dropdown-3" id="dropdown" class="form-select novalidate" required>
                       <option selected value="">Select</option>
                       <option value="sample-1">Sample option 1</option>
@@ -205,7 +203,7 @@
                   </div>
                 </section>
 
-                <section>
+                <section class="radio-btns">
                   <h3>Radio Button</h3>
 
                   <div>
@@ -247,7 +245,7 @@
                   <h3>Snackbar</h3>
 
                   <div class="row">
-                    <div class="col controls">
+                    <div class="col-12 col-lg-6 controls">
                       <div class="snackbar error">
                         <img src="./images/error-icon.svg" alt="">
                         <p class="message">This is an error message!</p>
@@ -259,7 +257,7 @@
                       </div>
                     </div>
 
-                    <div class="col controls">
+                    <div class="col-12 col-lg-6 controls">
                       <div class="snackbar info">
                         <img src="./images/info-icon.svg" alt="">
                         <p class="message">This is an information message!</p>
@@ -315,6 +313,12 @@
         </main>
       </div>
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- Sidebar JS -->
+    <script src="./js/sidebar.js"></script>
   </body>
 
 </html>
