@@ -214,16 +214,8 @@ section.invoices .status.pending {
 }
 
 @media (min-width: 992px) {
-    .sidebar {
-        padding: 25px 30px;
-    }
-
     section.sales .sales-by-country .legend {
         grid-template-columns: 1fr 1fr;
-    }
-
-    main .title {
-        font-size: 30px;
     }
 
     .dashboard .stats-card {
