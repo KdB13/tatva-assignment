@@ -1,11 +1,15 @@
+html {
+    font-size: 10px;
+}
+
 body {
     background-color: #fafafa;
     font-family: Roboto, sans-serif;
 }
 
 body > div[class*="container"] {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 /*
@@ -21,6 +25,7 @@ body > div[class*="container"] {
     box-shadow: 0px 4px 31px #0000000A;
     border: 20px solid #FFFFFF;
     border-radius: 50%;
+    max-width: 300px;
 }
 
 
@@ -30,7 +35,7 @@ body > div[class*="container"] {
     Login form
 */
 .login {
-    padding-top: 3rem;
+    padding-top: 4rem;
     padding-bottom: 3rem;
 }
 
@@ -42,15 +47,20 @@ body > div[class*="container"] {
 .login .tagline {
     margin-top: 19px;
     font-weight: 300;
+    font-size: 2.5rem;
     color: #3E3E3E;
+}
+
+.login .tagline > strong {
+    color: #C8242F;
+    font-weight: 900;
 }
 
 .login .login-header {
     margin-top: 32px;
     margin-bottom: 23px;
-    font-size: 25px;
     font-weight: 400;
-    line-height: 33px;
+    font-size: 2rem;
     color: #3E3E3E;
 }
 
@@ -98,6 +108,7 @@ body > div[class*="container"] {
 .login .register-text,
 .login .forgot-pw {
     color: #ADADAD;
+    font-size: 15px;
     line-height: 20px;
 }
 
@@ -122,8 +133,8 @@ body > div[class*="container"] {
 /* Small devices (landscape phones) */
 @media (min-width: 576px) {
     body > div[class*="container"] {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
     }
 
     .hero .hero-image {
@@ -149,6 +160,11 @@ body > div[class*="container"] {
 
 /* Medium devices (tablets) */
 @media (min-width: 768px) {
+    body > div[class*="container"] {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
     main > .row {
         --bs-gutter-x: 35px;
     }
@@ -173,14 +189,16 @@ body > div[class*="container"] {
 
 /* Large devices */
 @media (min-width: 992px) {
+    html {
+        font-size: 12px;
+    }
+
     main > .row {
         --bs-gutter-x: 60px;
     }
 
     .login .tagline {
         max-width: 500px;
-        font-size: 40px;
-        line-height: 47px;
     }
 
     .login form {
@@ -198,6 +216,10 @@ body > div[class*="container"] {
 
 /* XX-large devices */
 @media (min-width: 1400px) {
+    html {
+        font-size: 16px;
+    }
+
     main > .row {
         --bs-gutter-x: 166px;
     }
@@ -209,5 +231,16 @@ body > div[class*="container"] {
 
     .login .container-fluid {
         max-width: 500px;
+    }
+
+    /* Desktop font sizes */
+    .login .login-header {
+        font-size: 25px;
+        line-height: 33px;
+    }
+
+    .login .tagline {
+        font-size: 40px;
+        line-height: 47px;
     }
 }
