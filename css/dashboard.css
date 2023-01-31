@@ -16,9 +16,12 @@
 .dashboard .stats-card {
     display: flex;
     align-items: center;
-    height: 116px;
-    padding-left: 38px;
-    padding-right: 28px;
+    /* height: 116px; */
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    padding: 1.2rem 1.5rem;
+    /* padding-left: 38px; */
+    /* padding-right: 28px; */
 }
 
 .dashboard .stats-card > div {
@@ -64,7 +67,7 @@ section.sales {
 section.sales .sale,
 section.sales .sales-by-country,
 section.invoices .table {
-    padding: 24px 29px 29px 29px;
+    padding: 1.3rem 1.2rem;
 }
 
 section.sales .sale-header .nav-link {
@@ -199,5 +202,33 @@ section.invoices .status.pending {
 @media (min-width: 576px) {
     section.sales .sales-by-country .legend {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    section.sales .sale,
+    section.sales .sales-by-country,
+    section.invoices .table {
+        padding: 24px 29px 29px 29px;
+    }
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        padding: 25px 30px;
+    }
+
+    section.sales .sales-by-country .legend {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main .title {
+        font-size: 30px;
+    }
+
+    .dashboard .stats-card {
+        height: 116px;
+        padding-left: 38px;
+        padding-right: 28px;
     }
 }

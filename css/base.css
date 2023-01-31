@@ -89,7 +89,7 @@ body.sb-sidenav-toggled .main-container .sidebar-wrapper {
 }
 
 .sidebar {
-    padding: 25px 30px;
+    padding: 1rem 1.5rem;
     background-color: white;
 
     /* Color overrides */
@@ -134,16 +134,14 @@ body.sb-sidenav-toggled .main-container .sidebar-wrapper {
 }
 
 main {
-    /* padding-left: 50px;
-    padding-right: 50px; */
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 41px;
-    padding-bottom: 43px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 main .title {
-    font-size: 30px;
+    font-size: 1.6rem;
     line-height: 39px;
     font-weight: 500;
     margin-bottom: 22px;
@@ -183,6 +181,13 @@ main .title {
 
 /* Large devices */
 @media (min-width: 992px) {
+    main {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 41px;
+        padding-bottom: 43px;
+    }
+
     header {
         padding-left: 29px;
         padding-right: 44px;
