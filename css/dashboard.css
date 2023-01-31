@@ -21,9 +21,19 @@
     padding-right: 28px;
 }
 
-.dashboard .stats .col {
+.dashboard .stats-card > div {
+    flex-basis: 100%;
+}
+
+.dashboard .stats,
+.dashboard .sales {
+    row-gap: 1rem;
+}
+
+.dashboard .stats > div {
     padding-right: 15px;
     padding-left: 15px;
+    flex-grow: 1;
 }
 
 .dashboard .stats-card p {
@@ -66,14 +76,6 @@ section.sales .sale-header .nav-link {
     color: #ADADAD;
 }
 
-section.sales > div:nth-child(1) {
-    flex-basis: 802px;
-}
-
-section.sales > div:nth-child(2) {
-    flex: 1;
-}
-
 section.sales .sale,
 .sales-by-country {
     height: 100%;
@@ -95,18 +97,15 @@ section.sales .sales-by-country h2 {
 }
 
 section.sales .sales-by-country .legend {
+    list-style-type: none;
+    display: grid;
     padding: 0;
     margin: 0;
-}
-
-section.sales .sales-by-country .legend {
-    list-style-type: none;
-    flex-wrap: wrap;
-    row-gap: 18px;
+    gap: 18px;
 }
 
 section.sales .sales-by-country .legend li {
-    flex: 50%;
+    flex: 100%;
     font-size: 15px;
     line-height: 20px;
 }
@@ -145,6 +144,7 @@ section.invoices .view-all {
     font-size: 12px;
     line-height: 16px;
     color: #C8242F;
+    margin-left: 1rem;
 }
 
 section.invoices table {
@@ -187,4 +187,17 @@ section.invoices .status.failed {
 section.invoices .status.pending {
     background-color: #F8F8F8;
     color: #BABABA;
+}
+
+
+/*
+    Responsive Design
+    -----------------
+*/
+
+/* Small devices (landscape phones) */
+@media (min-width: 576px) {
+    section.sales .sales-by-country .legend {
+        grid-template-columns: 1fr 1fr;
+    }
 }

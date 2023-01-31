@@ -23,23 +23,26 @@ body {
     background-image: url('/images/downward-arrow.svg');
 }
 
+/* Header */
 header {
-    padding-left: 29px;
-    padding-right: 44px;
+    padding: 1rem 1.5rem;
     background-color: white;
 }
 
-.navbar {
-    height: 80px;
+header .navbar {
+    row-gap: 1.5rem;
 }
 
-.navbar .navbar-brand {
+header .navbar > div {
+    flex-basis: 100%;
+}
+
+header .navbar .prof-notif {
+    justify-content: space-between;
+}
+
+header .navbar .navbar-brand {
     margin-left: 25px;
-    margin-right: 77px;
-}
-
-.search-bar {
-    padding-right: 50px;
 }
 
 .search-bar .search-icon {
@@ -66,6 +69,25 @@ header {
     margin-right: 12px;
 }
 
+/* Main container (sidebar + main) */
+.main-container {
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.sidebar-wrapper {
+    min-width: 242px;
+    display: none;
+    -webkit-transition: display .25s ease-out;
+    -moz-transition: display .25s ease-out;
+    -o-transition: display .25s ease-out;
+    transition: display .25s ease-out;
+}
+
+body.sb-sidenav-toggled .main-container .sidebar-wrapper {
+    display: initial;
+}
+
 .sidebar {
     padding: 25px 30px;
     background-color: white;
@@ -81,7 +103,6 @@ header {
 .sidebar .nav-item {
     display: flex;
     align-items: center;
-    width: 183px;
     padding-left: 18px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -113,8 +134,10 @@ header {
 }
 
 main {
-    padding-left: 50px;
-    padding-right: 50px;
+    /* padding-left: 50px;
+    padding-right: 50px; */
+    padding-left: 30px;
+    padding-right: 30px;
     padding-top: 41px;
     padding-bottom: 43px;
 }
@@ -124,4 +147,86 @@ main .title {
     line-height: 39px;
     font-weight: 500;
     margin-bottom: 22px;
+}
+
+
+/*
+    Responsive Design
+    -----------------
+*/
+
+/* Small devices (landscape phones) */
+@media (min-width: 576px) {
+
+    header .navbar .prof-notif,
+    header .navbar .logo {
+        flex-basis: 50%;
+    }
+
+    header .navbar .prof-notif {
+        order: 2;
+        justify-content: end;
+    }
+
+    header .navbar .search-bar {
+        order: 3;
+    }
+
+    header .navbar .btn-notifications {
+        margin-right: 1.5rem;
+    }
+
+    header .navbar .btn-menu {
+        width: 18px;
+    }
+}
+
+/* Large devices */
+@media (min-width: 992px) {
+    header {
+        padding-left: 29px;
+        padding-right: 44px;
+    }
+
+    header .navbar {
+        height: 80px;
+    }
+
+    header .navbar .navbar-brand {
+        margin-right: 77px;
+    }
+
+    header .navbar .logo,
+    header .navbar .search-bar,
+    header .navbar .prof-notif {
+        flex-basis: auto;
+    }
+
+    header .navbar .search-bar {
+        order: 2;
+        flex: 1 1 auto;
+        padding-right: 50px;
+    }
+
+    header .navbar .prof-notif {
+        order: 3;
+    }
+
+    .sidebar-wrapper {
+        margin-left: 0;
+        display: initial;
+    }
+
+    .main-container {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .main-container .main {
+        width: 100%;
+    }
+
+    body.sb-sidenav-toggled .main-container .sidebar-wrapper {
+        display: none;
+    }
 }
