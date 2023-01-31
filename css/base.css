@@ -75,7 +75,6 @@ header .navbar .navbar-brand {
 }
 
 .sidebar-wrapper {
-    min-width: 242px;
     display: none;
     -webkit-transition: display .25s ease-out;
     -moz-transition: display .25s ease-out;
@@ -100,6 +99,7 @@ body.sb-sidenav-toggled .main-container .sidebar-wrapper {
 }
 
 .sidebar .nav-item {
+    height: 43px;
     display: flex;
     align-items: center;
     padding-left: 18px;
@@ -127,9 +127,15 @@ body.sb-sidenav-toggled .main-container .sidebar-wrapper {
 }
 
 .sidebar .nav-link {
-    padding-left: 13px;
+    padding: 0;
     font-size: 16px;
     line-height: 21px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .nav-link img {
+    margin-right: 13px;
 }
 
 main {
@@ -175,6 +181,48 @@ main .title {
 
     header .navbar .btn-menu {
         width: 18px;
+    }
+}
+
+@media (min-width: 768px) {
+    .sidebar-wrapper {
+        min-width: auto;
+        margin-left: 0;
+        display: initial;
+    }
+
+    .main-container {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .main-container .main {
+        width: 100%;
+    }
+
+    body.sb-sidenav-toggled .main-container .sidebar-wrapper {
+        display: none;
+    }
+
+    .sidebar {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .sidebar .nav-link {
+        padding: 0;
+    }
+
+    .sidebar .nav-link span {
+        display: none;
+    }
+
+    .sidebar .nav-link img {
+        margin-right: 0;
+    }
+
+    .sidebar .nav-item {
+        padding: 1rem;
     }
 }
 
@@ -226,25 +274,20 @@ main .title {
         margin-right: 52px;
     }
 
+    .sidebar-wrapper {
+        min-width: 242px;
+    }
+
     .sidebar {
         padding: 25px 30px;
     }
-
-    .sidebar-wrapper {
-        margin-left: 0;
-        display: initial;
+    
+    .sidebar .nav-link span {
+        display: block;
     }
 
-    .main-container {
-        flex-direction: row;
-        align-items: stretch;
+    .sidebar .nav-link img {
+        margin-right: 13px;
     }
 
-    .main-container .main {
-        width: 100%;
-    }
-
-    body.sb-sidenav-toggled .main-container .sidebar-wrapper {
-        display: none;
-    }
 }
