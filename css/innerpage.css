@@ -10,7 +10,8 @@ section.snackbars .row {
 .innerpage .form {
     background-color: white;
     border-radius: 5px;
-    padding: 23px 30px 36px 36px;
+    /* padding: 23px 30px 36px 36px; */
+    padding: 1rem 1.5rem;
 }
 
 .innerpage .form section {
@@ -340,5 +341,11 @@ section.tabs .content {
     .ctas {
         flex-direction: row;
         column-gap: 21px;
+    }
+}
+
+@media (min-width: 992px) {
+    .innerpage .form {
+        padding: 23px 30px 36px 36px;
     }
 }
